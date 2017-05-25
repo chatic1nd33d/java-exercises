@@ -47,4 +47,8 @@ public class Course {
         roster = aRoster;
     }
 
+    public boolean equals(Object o) {
+        return ((Course) o).getRoster() == getRoster();
+    }
+
 }
