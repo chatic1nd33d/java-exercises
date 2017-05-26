@@ -1,3 +1,7 @@
+package org.launchcode.java.school;
+
+import java.util.Scanner;
+
 public class Student {
     private static int nextStudentId = 1;
     private String name;
@@ -6,27 +10,35 @@ public class Student {
     private double gpa;
 
     public String getName() {
+
         return name;
     }
     public void setName(String aName) {
+
         name = aName;
     }
     public int getStudentId() {
+
         return studentId;
     }
     private void setStudentId(int aStudentId) {
+
         studentId = aStudentId;
     }
     public int getNumberOfCredits() {
+
         return numberOfCredits;
     }
     public void setNumberOfCredits(int aNumberOfCredits) {
+
         numberOfCredits = aNumberOfCredits;
     }
     public double getGpa() {
+
         return gpa;
     }
     public void setGpa(double aGpa) {
+
         gpa = aGpa;
     }
 
@@ -47,6 +59,7 @@ public class Student {
     }
 
     public Student(String name, int studentId) {
+
         this(name, studentId, 0, 0);
     }
 
@@ -56,23 +69,23 @@ public class Student {
     }
 
     public void addGrade(int courseCredits, double grade) {
-        int newCreditsTotal = this.numberOfCredits + courseCredits
-        this.gpa = (this.gpa*this.numberOfCredits)+(grade * courseCredits)/ newCreditsTotal
-        this.numberOfCredits = this.numberOfCredits + courseCredits
+        int newCreditsTotal = this.numberOfCredits + courseCredits;
+        this.gpa = (this.gpa*this.numberOfCredits)+(grade * courseCredits)/ newCreditsTotal;
+        this.numberOfCredits = this.numberOfCredits + courseCredits;
     }
 
     public String getGradeLevel() {
-        if(this.numberOfCredits>=0 and this.numberOfCredits<30){
-            return "freshman"
+        if(this.numberOfCredits>=0) and (this.numberOfCredits<30){
+            return "freshman";
         }
         else if(this.numberOfCredits>29 and this.numberOfCredits<60){
-            return "sophomore"
+            return "sophomore";
         }
         else if(this.numberOfCredits>59 and this.numberOfCredits<90){
-            return "junior"
+            return "junior";
         }
         else{
-            return "senior"
+            return "senior";
         }
     }
 
